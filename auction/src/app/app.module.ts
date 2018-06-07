@@ -8,11 +8,17 @@ registerLocaleData(localeRu, 'ru');
 import { RoutingModule } from './routing.module';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CaruselComponent } from './components/carusel/carusel.component';
+import { AclDirective } from './components/header/acl.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CaruselComponent,
+    AclDirective
   ],
   imports: [
     BrowserModule,
