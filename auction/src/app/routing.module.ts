@@ -3,7 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
-const routing = [{ path: 'dashboard', component: DashboardComponent }];
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { HomeComponent } from './components/home/home.component';
+
+const routing = [
+  { path: '', component: HomeComponent},
+  { path: 'products/:id', component: DetailProductComponent },
+  { path: 'dashboard', component: DashboardComponent }
+
+];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(routing)],

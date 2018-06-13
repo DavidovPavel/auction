@@ -23,6 +23,9 @@ import { TextComponent } from './components/widget/proto/text.component';
 import { GraphComponent } from './components/widget/proto/graph.component';
 import { StatisticComponent } from './components/widget/proto/statistic.component';
 import { ChartComponent } from './components/widget/proto/chart.component';
+import { DetailProductComponent } from './components/detail-product/detail-product.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { ChartComponent } from './components/widget/proto/chart.component';
     TextComponent,
     GraphComponent,
     StatisticComponent,
-    ChartComponent
+    ChartComponent,
+    DetailProductComponent,
+    HomeComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,

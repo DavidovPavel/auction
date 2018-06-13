@@ -1,0 +1,5 @@
+<div class="carusel"></div>
+
+<div class="products">
+  <app-product-item *ngFor="let item of products$ | async" [model]="item"></app-product-item>
+</div>
