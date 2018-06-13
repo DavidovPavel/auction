@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  change: any;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  _changing() {
+    this.change = Math.random();
   }
 
 }

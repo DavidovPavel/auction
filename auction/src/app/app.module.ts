@@ -6,6 +6,10 @@ import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
 registerLocaleData(localeRu, 'ru');
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { environment } from '../environments/environment';
+
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -26,6 +30,9 @@ import { ChartComponent } from './components/widget/proto/chart.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -48,6 +55,8 @@ import { ProductItemComponent } from './components/product-item/product-item.com
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule.enablePersistence(),
     RoutingModule,
     SharedModule,
     FormsModule,
