@@ -32,8 +32,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

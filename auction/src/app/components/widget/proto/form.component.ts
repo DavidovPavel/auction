@@ -8,7 +8,7 @@ import { DynamicComponent } from '../model';
       form works!
     </p>
     <p>
-  <button (click)="_event($event)">event</button>
+  <button (click)="_event()">event</button>
 </p>
   `,
   styles: []
@@ -22,7 +22,7 @@ export class FormComponent implements OnInit, DynamicComponent {
   ngOnInit() {
   }
 
-  private _event() {
+  _event() {
     this.event.emit({ name: 'event', data: this.data });
   }
 
