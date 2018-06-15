@@ -31,6 +31,9 @@ import { DetailProductComponent } from './components/detail-product/detail-produ
 import { HomeComponent } from './components/home/home.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 
+import { AdminModule } from './admin/admin.module';
+import { TimeAgoPipe } from './time-ago.pipe';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { ProductItemComponent } from './components/product-item/product-item.com
     ChartComponent,
     DetailProductComponent,
     HomeComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,8 @@ import { ProductItemComponent } from './components/product-item/product-item.com
     RoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   entryComponents: [
     ImageComponent,

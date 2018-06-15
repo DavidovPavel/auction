@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  start = new Date();
   change: any;
 
   constructor() { }
@@ -15,7 +16,7 @@ export class SearchComponent implements OnInit {
   }
 
   _changing() {
-    this.change = Math.random();
+    this.change = new Date(); // Math.random();
   }
 
 }

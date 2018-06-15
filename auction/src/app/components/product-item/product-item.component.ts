@@ -10,7 +10,7 @@ export class ProductItemComponent implements OnInit, OnChanges {
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    // console.log(changes);
   }
 
   ngOnInit() {}

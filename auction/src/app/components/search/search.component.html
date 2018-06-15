@@ -1,6 +1,6 @@
-<p>
-  search works!
-  {{ change }}
+
+  <p>{{ change | date:'mediumTime' }}</p>
+  <p>Time ago: {{ start | timeAgo }}</p>
 
   <button (click)="_changing()">click</button>
-</p>
+
