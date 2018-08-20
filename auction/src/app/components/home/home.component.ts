@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product, ProductsService } from '../../services/products.service';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Product } from '../../models';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +14,10 @@ export class HomeComponent implements OnInit {
 
   products$: Observable<Product[]>;
 
-  constructor(private ps: ProductsService, private afs: AngularFirestore) {}
+  constructor( private afs: AngularFirestore) {}
 
   ngOnInit() {
-    this.prodCollectionRef = this.afs.collection('products', ref => ref.orderBy('id', 'asc'));
+    this.prodCollectionRef = this.afs.collection('products', ref => ref.orderBy('position', 'asc'));
     this.products$ = this.prodCollectionRef.valueChanges();
   }
 }

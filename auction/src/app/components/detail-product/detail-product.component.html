@@ -2,3 +2,11 @@
   {{ model.title }}
 </div>
 
+<div>
+  <div *ngFor="let review of reviews$ | async">
+    {{ review.date | date:'short' }} 
+    <p>{{ review.message }}</p>
+    {{ review.user.email }}
+  </div>
+</div>
+
